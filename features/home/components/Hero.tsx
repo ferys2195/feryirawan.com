@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 
-export default function Hero() {
+export function Hero() {
   return (
     <section className="border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
@@ -32,9 +32,12 @@ export default function Hero() {
               Lihat Proyek
               <span>→</span>
             </Link>
-            <button className="rounded-lg border border-neutral-300 px-6 py-3 font-medium text-neutral-900 hover:bg-neutral-50 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-900">
+            <Link
+              href="/contact"
+              className="rounded-lg border border-neutral-300 px-6 py-3 font-medium text-neutral-900 hover:bg-neutral-50 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-900"
+            >
               Hubungi Saya
-            </button>
+            </Link>
             <div className="flex gap-3">
               <a
                 href="https://github.com/ferys2195"

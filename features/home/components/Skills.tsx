@@ -1,30 +1,17 @@
-export default function Skills() {
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      skills: ['React.js', 'Next.js', 'Inertia.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'shadcn/ui'],
-    },
-    {
-      title: 'Backend',
-      skills: ['PHP', 'Laravel', 'REST API Development'],
-    },
-    {
-      title: 'Database',
-      skills: ['MySQL', 'Relational Database Design'],
-    },
-    {
-      title: 'Tools & Environment',
-      skills: ['Git', 'Linux Server', 'Nginx'],
-    },
-  ]
+import { skillCategories } from "@/lib/data/skills";
 
+export function Skills() {
   return (
     <section className="border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="space-y-8">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold text-neutral-900 dark:text-white">Tech Stack</h2>
-            <p className="text-neutral-600 dark:text-neutral-400">Teknologi yang saya gunakan sehari-hari.</p>
+            <h2 className="text-3xl font-bold text-neutral-900 dark:text-white">
+              Tech Stack
+            </h2>
+            <p className="text-neutral-600 dark:text-neutral-400">
+              Teknologi yang saya gunakan sehari-hari.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -52,5 +39,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }
