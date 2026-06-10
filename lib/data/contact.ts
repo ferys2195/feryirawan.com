@@ -1,0 +1,8 @@
+import type { ContactInfo } from "@/types";
+
+export const contactInfo: ContactInfo = {
+  email: "ferys2195@gmail.com",
+  phone: "+62 822 3406 8587",
+  github: "https://github.com/ferys2195",
+  linkedin: "https://linkedin.com/in/ferys2195",
+};

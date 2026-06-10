@@ -1,0 +1,28 @@
+import type { SkillCategory } from "@/types";
+
+export const skillCategories: SkillCategory[] = [
+  {
+    title: "Frontend",
+    skills: [
+      "React.js",
+      "Next.js",
+      "Inertia.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
+  },
+  {
+    title: "Backend",
+    skills: ["PHP", "Laravel", "REST API Development"],
+  },
+  {
+    title: "Database",
+    skills: ["MySQL", "Relational Database Design"],
+  },
+  {
+    title: "Tools & Environment",
+    skills: ["Git", "Linux Server", "Nginx"],
+  },
+];
