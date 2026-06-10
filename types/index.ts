@@ -15,7 +15,7 @@ export interface SkillCategory {
 }
 
 export interface NavLink {
-  label: string;
+  label?: string;
   href: string;
 }
 

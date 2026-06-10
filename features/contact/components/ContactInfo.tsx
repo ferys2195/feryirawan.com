@@ -1,13 +1,16 @@
 import { Mail, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { contactInfo } from "@/lib/data/contact";
 
 export function ContactInfo() {
+  const t = useTranslations("contact");
+
   return (
     <>
       <section className="border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-neutral-900 dark:text-white">
-            Hubungi Saya
+            {t("title")}
           </h1>
         </div>
       </section>
@@ -17,12 +20,10 @@ export function ContactInfo() {
           <div className="space-y-12">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-neutral-900 dark:text-white">
-                Hubungi saya untuk diskusi proyek atau peluang kolaborasi
+                {t("heading")}
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400">
-                Saya selalu terbuka untuk mendengarkan tentang proyek baru dan
-                peluang kerja. Jangan ragu untuk menghubungi saya melalui
-                saluran komunikasi di bawah.
+                {t("description")}
               </p>
             </div>
 
@@ -31,7 +32,7 @@ export function ContactInfo() {
                 <Mail className="mt-1 h-6 w-6 shrink-0 text-neutral-900 dark:text-white" />
                 <div>
                   <h3 className="font-semibold text-neutral-900 dark:text-white">
-                    Email
+                    {t("email")}
                   </h3>
                   <a
                     href={`mailto:${contactInfo.email}`}
@@ -46,7 +47,7 @@ export function ContactInfo() {
                 <Phone className="mt-1 h-6 w-6 shrink-0 text-neutral-900 dark:text-white" />
                 <div>
                   <h3 className="font-semibold text-neutral-900 dark:text-white">
-                    Telepon
+                    {t("phone")}
                   </h3>
                   <a
                     href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
@@ -67,7 +68,7 @@ export function ContactInfo() {
                 </svg>
                 <div>
                   <h3 className="font-semibold text-neutral-900 dark:text-white">
-                    GitHub
+                    {t("github")}
                   </h3>
                   <a
                     href={contactInfo.github}
@@ -90,7 +91,7 @@ export function ContactInfo() {
                 </svg>
                 <div>
                   <h3 className="font-semibold text-neutral-900 dark:text-white">
-                    LinkedIn
+                    {t("linkedin")}
                   </h3>
                   <a
                     href={contactInfo.linkedin}
@@ -102,17 +103,6 @@ export function ContactInfo() {
                   </a>
                 </div>
               </div>
-            </div>
-
-            <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-6 dark:border-neutral-800 dark:bg-neutral-900">
-              <h3 className="font-semibold text-neutral-900 dark:text-white">
-                Jam Kerja
-              </h3>
-              <p className="mt-2 text-neutral-600 dark:text-neutral-400">
-                Senin - Jumat: 09:00 - 17:00
-                <br />
-                Sabtu - Minggu: Libur
-              </p>
             </div>
           </div>
         </div>

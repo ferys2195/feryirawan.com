@@ -1,0 +1,56 @@
+{
+  "home": {
+    "greeting": "Halo, saya",
+    "role": "Frontend Developer (React.js) with Backend Experience",
+    "description": "Frontend-focused Developer dengan pengalaman 4+ tahun, awalnya fokus di backend menggunakan Laravel. Saat ini menspesialisasikan diri di React.js untuk membangun antarmuka yang responsif dan integrasi API yang efektif.",
+    "viewProjects": "Lihat Proyek",
+    "contactMe": "Hubungi Saya",
+    "techStack": "Tech Stack",
+    "techStackDesc": "Teknologi yang saya gunakan sehari-hari.",
+    "recentProjects": "Proyek Terbaru",
+    "recentProjectsDesc": "Sebagian dari pekerjaan yang saya kerjakan baru-baru ini.",
+    "viewAll": "Lihat semua"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "career": "Perjalanan Karir",
+    "careerDesc": "Saya adalah seorang Frontend Developer dengan pengalaman lebih dari 4 tahun di industri teknologi. Perjalanan saya dimulai sebagai full-stack developer dengan fokus pada backend menggunakan Laravel, namun saat ini saya telah mengkhususkan diri dalam pengembangan frontend menggunakan React.js dan Next.js.",
+    "skills": "Keahlian",
+    "skillsDesc": "Saya memiliki keahlian mendalam dalam membangun antarmuka web yang responsif dan modern. Dengan latar belakang backend yang kuat, saya memahami arsitektur API dan dapat berkolaborasi dengan baik dengan backend developers. Saya terbiasa bekerja dengan teknologi terkini seperti React.js, Next.js, TypeScript, dan Tailwind CSS.",
+    "experience": "Pengalaman Profesional",
+    "experienceTitle": "Full-Stack Developer",
+    "experiencePeriod": "2018 - Sekarang",
+    "experienceDesc": "Mengembangkan berbagai aplikasi web untuk klien pemerintahan dan pendidikan. Menangani proyek dari pembuatan sistem manajemen sekolah, platform informasi publik, hingga REST API untuk aplikasi administratif.",
+    "methodology": "Metodologi Kerja",
+    "methodologyDesc": "Saya percaya pada pentingnya komunikasi yang jelas dengan klien dan tim. Saya bekerja dengan metodologi agile, memberikan update secara berkala dan selalu terbuka untuk feedback. Saya juga percaya pada clean code dan dokumentasi yang baik untuk memudahkan maintenance di masa depan.",
+    "hobbies": "Hobi & Minat",
+    "hobbiesDesc": "Di luar pekerjaan, saya senang belajar tentang teknologi baru dan tren terbaru dalam web development. Saya aktif mengikuti komunitas developer dan tidak jarang berbagi pengetahuan dengan rekan-rekan sesama developer. Saya juga gemar mengikuti tutorial dan membaca dokumentasi untuk terus meningkatkan skill."
+  },
+  "projects": {
+    "title": "Proyek",
+    "description": "Kumpulan proyek yang saya kerjakan, mulai dari sistem layanan pemerintahan, manajemen sekolah, hingga REST API untuk aplikasi internal."
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "heading": "Hubungi saya untuk diskusi proyek atau peluang kolaborasi",
+    "description": "Saya selalu terbuka untuk mendengarkan tentang proyek baru dan peluang kerja. Jangan ragu untuk menghubungi saya melalui saluran komunikasi di bawah.",
+    "email": "Email",
+    "phone": "Telepon",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2026 Fery Irawan. All rights reserved."
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Halaman tidak ditemukan",
+    "backHome": "Kembali ke Beranda"
+  }
+}

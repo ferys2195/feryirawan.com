@@ -22,7 +22,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </p>
       </div>
 
-      <p className="mb-4 flex-grow text-sm text-neutral-700 dark:text-neutral-300">
+      <p className="mb-4 grow text-sm text-neutral-700 dark:text-neutral-300">
         {project.description}
       </p>
 

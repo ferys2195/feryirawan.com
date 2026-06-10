@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { projects } from "@/lib/data/projects";
 
 export function RecentProjects() {
+  const t = useTranslations("home");
   const recentProjects = projects.slice(0, 3);
 
   return (
@@ -12,17 +14,17 @@ export function RecentProjects() {
           <div className="flex items-end justify-between">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold text-neutral-900 dark:text-white">
-                Proyek Terbaru
+                {t("recentProjects")}
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400">
-                Sebagian dari pekerjaan yang saya kerjakan baru-baru ini.
+                {t("recentProjectsDesc")}
               </p>
             </div>
             <Link
               href="/projects"
               className="flex items-center gap-2 text-sm font-medium text-neutral-900 hover:text-neutral-600 dark:text-white dark:hover:text-neutral-400"
             >
-              Lihat semua <ArrowRight className="h-4 w-4" />
+              {t("viewAll")} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
@@ -44,7 +46,7 @@ export function RecentProjects() {
                   </p>
                 </div>
 
-                <p className="mb-4 flex-grow text-sm text-neutral-700 dark:text-neutral-300">
+                <p className="mb-4 grow text-sm text-neutral-700 dark:text-neutral-300">
                   {project.description}
                 </p>
 

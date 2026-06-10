@@ -1,16 +1,19 @@
+import { useTranslations } from "next-intl";
 import { skillCategories } from "@/lib/data/skills";
 
 export function Skills() {
+  const t = useTranslations("home");
+
   return (
     <section className="border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="space-y-8">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold text-neutral-900 dark:text-white">
-              Tech Stack
+              {t("techStack")}
             </h2>
             <p className="text-neutral-600 dark:text-neutral-400">
-              Teknologi yang saya gunakan sehari-hari.
+              {t("techStackDesc")}
             </p>
           </div>
 

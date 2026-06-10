@@ -1,26 +1,26 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function Hero() {
+  const t = useTranslations("home");
+
   return (
     <section className="border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="space-y-8">
           <div className="space-y-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Halo, saya
+              {t("greeting")}
             </p>
             <h1 className="text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
               Fery Irawan
             </h1>
             <p className="text-xl text-neutral-600 dark:text-neutral-400">
-              Frontend Developer (React.js) with Backend Experience
+              {t("role")}
             </p>
             <p className="max-w-2xl text-neutral-700 dark:text-neutral-300">
-              Frontend-focused Developer dengan pengalaman 4+ tahun, awalnya
-              fokus di backend menggunakan Laravel. Saat ini menspesialisasikan
-              diri di React.js untuk membangun antarmuka yang responsif dan
-              integrasi API yang efektif.
+              {t("description")}
             </p>
           </div>
 
@@ -29,14 +29,14 @@ export function Hero() {
               href="/projects"
               className="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-6 py-3 font-medium text-white hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100"
             >
-              Lihat Proyek
+              {t("viewProjects")}
               <span>→</span>
             </Link>
             <Link
               href="/contact"
               className="rounded-lg border border-neutral-300 px-6 py-3 font-medium text-neutral-900 hover:bg-neutral-50 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-900"
             >
-              Hubungi Saya
+              {t("contactMe")}
             </Link>
             <div className="flex gap-3">
               <a
