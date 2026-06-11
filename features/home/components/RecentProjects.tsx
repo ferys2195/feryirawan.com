@@ -155,10 +155,3 @@ export function RecentProjects({ projects }: RecentProjectsProps) {
     </section>
   );
 }
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
