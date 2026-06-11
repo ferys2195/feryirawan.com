@@ -4,6 +4,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Web Ruang PPID",
+    image: "https://placehold.co/600x400/2563eb/ffffff?text=Web+Ruang+PPID",
     category: "Government",
     organization: "Disdukcapil Provinsi Kalimantan Tengah",
     period: "Sep 2025 – Nov 2025",
@@ -14,10 +15,15 @@ export const projects: Project[] = [
       "Mengimplementasikan fitur backend untuk manajemen konten dan informasi publik",
     ],
     tech: ["Laravel", "MySQL", "Inertia.js", "React.js", "Tailwind CSS"],
+    links: {
+      demo: "https://ruangppid.kalteng.go.id",
+    },
   },
   {
     id: 2,
     name: "School Management System",
+    image:
+      "https://placehold.co/600x400/059669/ffffff?text=School+Management+System",
     category: "Education",
     organization: "SDIT Imam Syafii Sampit",
     period: "Mar 2025 – Jul 2025",
@@ -60,6 +66,8 @@ export const projects: Project[] = [
   {
     id: 5,
     name: "Public Information Web Portals (Rebuild)",
+    image:
+      "https://placehold.co/600x400/7c3aed/ffffff?text=Public+Information+Web+Portals",
     category: "Government",
     organization: "DPMPTSP Kabupaten Kotawaringin Timur",
     period: "Jan 2022 – May 2022",
@@ -74,6 +82,8 @@ export const projects: Project[] = [
   {
     id: 6,
     name: "Public Information Web Portals",
+    image:
+      "https://placehold.co/600x400/dc2626/ffffff?text=Public+Information+Web+Portals",
     category: "Government",
     organization: "DPMPTSP Kabupaten Kotawaringin Timur",
     period: "Sep 2019 – Dec 2019",
@@ -87,6 +97,8 @@ export const projects: Project[] = [
   {
     id: 7,
     name: "Customs Administration System",
+    image:
+      "https://placehold.co/600x400/d97706/ffffff?text=Customs+Administration+System",
     category: "Internal System",
     organization: "KPPBC TMP C Sampit",
     period: "Mar 2018 – May 2018",

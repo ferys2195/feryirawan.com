@@ -7,6 +7,11 @@ export interface Project {
   description: string;
   highlights: string[];
   tech: string[];
+  image?: string;
+  links?: {
+    demo?: string;
+    source?: string;
+  };
 }
 
 export interface SkillCategory {
