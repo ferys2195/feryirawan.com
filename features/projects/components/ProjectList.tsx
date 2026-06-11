@@ -1,8 +1,12 @@
 import { useTranslations } from "next-intl";
-import { projects } from "@/lib/data/projects";
+import type { Project } from "@/types";
 import { ProjectCard } from "./ProjectCard";
 
-export function ProjectListSection() {
+interface ProjectListSectionProps {
+  projects: Project[];
+}
+
+export function ProjectListSection({ projects }: ProjectListSectionProps) {
   const t = useTranslations("projects");
 
   return (

@@ -1,13 +1,18 @@
-import { Hero } from "@/features/home";
-import { Skills } from "@/features/home";
-import { RecentProjects } from "@/features/home";
+import { Hero, Skills, RecentProjects } from "@/features/home";
+import { fetcher } from "@/lib/fetcher";
+import type { SkillCategory, Project } from "@/types";
 
-export default function Page() {
+export default async function Page() {
+  const [skillsData, projectsData] = await Promise.all([
+    fetcher<{ skillCategories: SkillCategory[] }>("/skills.json"),
+    fetcher<{ projects: Project[] }>("/projects.json"),
+  ]);
+
   return (
     <>
       <Hero />
-      <Skills />
-      <RecentProjects />
+      <Skills skillCategories={skillsData.skillCategories} />
+      <RecentProjects projects={projectsData.projects} />
     </>
   );
 }
