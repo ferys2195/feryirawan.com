@@ -1,11 +1,26 @@
 import Link from "next/link";
-import { ArrowRight, ExternalLink, Code2 } from "lucide-react";
+import { ArrowRight, ExternalLink, Code2, Briefcase, User } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { Project } from "@/types";
 
 interface RecentProjectsProps {
   projects: Project[];
 }
+
+const typeConfig = {
+  client: {
+    badge: "Client",
+    icon: Briefcase,
+    badgeClass:
+      "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
+  },
+  personal: {
+    badge: "Personal",
+    icon: User,
+    badgeClass:
+      "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400",
+  },
+} as const;
 
 export function RecentProjects({ projects }: RecentProjectsProps) {
   const t = useTranslations("home");
@@ -33,64 +48,77 @@ export function RecentProjects({ projects }: RecentProjectsProps) {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {recentProjects.map((project) => (
-              <div
-                key={project.id}
-                className="flex flex-col overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800"
-              >
-                {/* Thumbnail */}
-                <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={
-                      project.image ||
-                      `https://placehold.co/600x400/1a1a2e/eaeaea?text=${encodeURIComponent(project.name)}`
-                    }
-                    alt={project.name}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
+            {recentProjects.map((project) => {
+              const config = typeConfig[project.projectType];
+              const TypeIcon = config.icon;
 
-                <div className="flex flex-col p-6">
-                  <div className="mb-4 space-y-2">
-                    <p className="text-xs font-medium uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-                      {project.category}
-                    </p>
-                    <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
-                      {project.name}
-                    </h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                      {project.organization}
-                    </p>
+              return (
+                <div
+                  key={project.id}
+                  className="flex flex-col overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800"
+                >
+                  {/* Thumbnail */}
+                  <div className="relative aspect-video overflow-hidden">
+                    <img
+                      src={
+                        project.image ||
+                        `https://placehold.co/600x400/1a1a2e/eaeaea?text=${encodeURIComponent(project.name)}`
+                      }
+                      alt={project.name}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
 
-                  <p className="mb-4 grow text-sm text-neutral-700 dark:text-neutral-300">
-                    {project.description}
-                  </p>
+                  <div className="flex flex-col p-6">
+                    <div className="mb-4 space-y-2">
+                      <div className="flex items-center gap-2">
+                        <p className="text-xs font-medium uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
+                          {project.category}
+                        </p>
+                        <span
+                          className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${config.badgeClass}`}
+                        >
+                          <TypeIcon className="h-3 w-3" />
+                          {config.badge}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
+                        {project.name}
+                      </h3>
+                      {project.organization && (
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                          {project.organization}
+                        </p>
+                      )}
+                    </div>
 
-                  <ul className="mb-6 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-                    {project.highlights.map((highlight, i) => (
-                      <li key={i} className="flex gap-2">
-                        <span className="text-neutral-400">•</span>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <p className="mb-4 grow text-sm text-neutral-700 dark:text-neutral-300">
+                      {project.description}
+                    </p>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                    <ul className="mb-6 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+                      {project.highlights.slice(0, 2).map((highlight, i) => (
+                        <li key={i} className="flex gap-2">
+                          <span className="text-neutral-400">•</span>
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                  {/* Links */}
-                  {project.links &&
-                    (project.links.demo || project.links.source) && (
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Links */}
+                    {project.links && (
                       <div className="mt-5 flex flex-wrap gap-3 border-t border-neutral-200 pt-5 dark:border-neutral-800">
                         {project.links.demo && (
                           <a
@@ -103,21 +131,30 @@ export function RecentProjects({ projects }: RecentProjectsProps) {
                             Live Demo
                           </a>
                         )}
-                        {project.links.source && (
-                          <a
-                            href={project.links.source}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
-                          >
-                            <Code2 className="h-4 w-4" />
-                            Source Code
-                          </a>
-                        )}
+                        {project.projectType === "personal" &&
+                          project.links.source && (
+                            <a
+                              href={project.links.source}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+                            >
+                              <Code2 className="h-4 w-4" />
+                              Source Code
+                            </a>
+                          )}
                       </div>
                     )}
+                  </div>
                 </div>
-              </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
             ))}
           </div>
         </div>

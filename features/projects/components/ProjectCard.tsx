@@ -1,4 +1,4 @@
-import { ExternalLink, Code2 } from "lucide-react";
+import { ExternalLink, Code2, Briefcase, User } from "lucide-react";
 import type { Project } from "../types/project.types";
 
 interface ProjectCardProps {
@@ -10,7 +10,25 @@ function getProjectThumbnail(project: Project): string {
   return `https://placehold.co/600x400/1a1a2e/eaeaea?text=${encodeURIComponent(project.name)}`;
 }
 
+const typeConfig = {
+  client: {
+    badge: "Client Project",
+    icon: Briefcase,
+    badgeClass:
+      "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
+  },
+  personal: {
+    badge: "Personal Project",
+    icon: User,
+    badgeClass:
+      "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400",
+  },
+} as const;
+
 export function ProjectCard({ project }: ProjectCardProps) {
+  const config = typeConfig[project.projectType];
+  const TypeIcon = config.icon;
+
   return (
     <div className="flex flex-col overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800">
       {/* Thumbnail */}
@@ -25,18 +43,30 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <div className="flex flex-col p-6">
         <div className="mb-4 space-y-2">
-          <p className="text-xs font-medium uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
-            {project.category}
-          </p>
+          <div className="flex items-center gap-2">
+            <p className="text-xs font-medium uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
+              {project.category}
+            </p>
+            <span
+              className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${config.badgeClass}`}
+            >
+              <TypeIcon className="h-3 w-3" />
+              {config.badge}
+            </span>
+          </div>
           <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
             {project.name}
           </h3>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            {project.organization}
-          </p>
-          <p className="text-xs text-neutral-500 dark:text-neutral-500">
-            {project.period}
-          </p>
+          {project.organization && (
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+              {project.organization}
+            </p>
+          )}
+          {project.period && (
+            <p className="text-xs text-neutral-500 dark:text-neutral-500">
+              {project.period}
+            </p>
+          )}
         </div>
 
         <p className="mb-4 grow text-sm text-neutral-700 dark:text-neutral-300">
@@ -63,8 +93,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
 
-        {/* Links */}
-        {project.links && (project.links.demo || project.links.source) && (
+        {/* Links — berbeda per tipe */}
+        {project.links && (
           <div className="mt-5 flex flex-wrap gap-3 border-t border-neutral-200 pt-5 dark:border-neutral-800">
             {project.links.demo && (
               <a
@@ -77,7 +107,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 Live Demo
               </a>
             )}
-            {project.links.source && (
+            {project.projectType === "personal" && project.links.source && (
               <a
                 href={project.links.source}
                 target="_blank"
