@@ -1,8 +1,12 @@
 import { Mail, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { contactInfo } from "@/lib/data/contact";
+import type { ContactInfo as ContactInfoType } from "@/types";
 
-export function ContactInfo() {
+interface ContactInfoProps {
+  contactInfo: ContactInfoType;
+}
+
+export function ContactInfo({ contactInfo }: ContactInfoProps) {
   const t = useTranslations("contact");
 
   return (

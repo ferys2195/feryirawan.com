@@ -1,7 +1,11 @@
 import { useTranslations } from "next-intl";
-import { skillCategories } from "@/lib/data/skills";
+import type { SkillCategory } from "@/types";
 
-export function Skills() {
+interface SkillsProps {
+  skillCategories: SkillCategory[];
+}
+
+export function Skills({ skillCategories }: SkillsProps) {
   const t = useTranslations("home");
 
   return (
