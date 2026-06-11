@@ -28,7 +28,11 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "A collection of projects I've worked on, from government service systems, school management, to REST APIs for internal applications."
+    "description": "A collection of projects I've worked on, from government service systems, school management, to REST APIs for internal applications.",
+    "clientTitle": "Client Projects",
+    "clientDesc": "Professional work delivered for clients and organizations.",
+    "personalTitle": "Personal Projects",
+    "personalDesc": "Side projects and tools I built for fun and learning."
   },
   "contact": {
     "title": "Contact Me",

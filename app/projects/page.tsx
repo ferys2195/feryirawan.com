@@ -3,9 +3,9 @@ import { fetcher } from "@/lib/fetcher";
 import type { Project } from "@/types";
 
 export const metadata = {
-  title: "Proyek - Fery Irawan Portfolio",
+  title: "Projects - Fery Irawan Portfolio",
   description:
-    "Koleksi proyek dan pengalaman kerja Fery Irawan sebagai Frontend Developer",
+    "A collection of client and personal projects by Fery Irawan — Frontend Developer",
 };
 
 export default async function ProjectsPage() {

@@ -2,6 +2,7 @@ export interface Project {
   id: number;
   name: string;
   category: string;
+  projectType: "client" | "personal";
   organization: string;
   period: string;
   description: string;

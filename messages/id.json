@@ -28,7 +28,11 @@
   },
   "projects": {
     "title": "Proyek",
-    "description": "Kumpulan proyek yang saya kerjakan, mulai dari sistem layanan pemerintahan, manajemen sekolah, hingga REST API untuk aplikasi internal."
+    "description": "Kumpulan proyek yang saya kerjakan, mulai dari sistem layanan pemerintahan, manajemen sekolah, hingga REST API untuk aplikasi internal.",
+    "clientTitle": "Proyek Klien",
+    "clientDesc": "Hasil kerja profesional untuk klien dan organisasi.",
+    "personalTitle": "Proyek Pribadi",
+    "personalDesc": "Proyek sampingan dan tools yang saya buat untuk belajar dan bersenang-senang."
   },
   "contact": {
     "title": "Hubungi Saya",
