@@ -1,8 +1,8 @@
 {
   "home": {
     "greeting": "Hi, I'm",
-    "role": "Frontend Developer (React.js) with Backend Experience",
-    "description": "Frontend-focused Developer with 4+ years of experience, originally focused on backend using Laravel. Currently specializing in React.js to build responsive interfaces and effective API integration.",
+    "role": "Frontend Developer — React.js & Laravel",
+    "description": "Building full-stack web applications since 2018. I handle everything from database design and REST APIs to crafting responsive, modern user interfaces — solo, end to end.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
     "techStack": "Tech Stack",
@@ -14,17 +14,19 @@
   "about": {
     "title": "About Me",
     "career": "Career Journey",
-    "careerDesc": "I'm a Frontend Developer with over 4 years of experience in the tech industry. My journey started as a full-stack developer focused on backend development with Laravel, but I've since specialized in frontend development using React.js and Next.js.",
+    "careerDesc": "My journey in tech started in 2018, building websites with native PHP and Bootstrap templates. In 2019 I adopted my first framework, CodeIgniter 3. By late 2021 I transitioned to Laravel, and in early 2022 I began building production applications with it. Mid-2022 I dove into frontend development with React — and the Laravel + React stack has been my primary toolkit ever since.",
     "skills": "Skills",
-    "skillsDesc": "I have deep expertise in building responsive and modern web interfaces. With a strong backend background, I understand API architecture and collaborate effectively with backend developers. I'm experienced with modern technologies like React.js, Next.js, TypeScript, and Tailwind CSS.",
+    "skillsDesc": "As a solo developer, I build full-stack web applications from start to finish — handling both backend architecture and frontend interfaces independently. My core stack includes React.js, Next.js, TypeScript, Tailwind CSS, and Laravel. I'm comfortable working across the entire stack, from designing database schemas and building REST APIs to crafting responsive, modern user interfaces.",
     "experience": "Professional Experience",
     "experienceTitle": "Full-Stack Developer",
     "experiencePeriod": "2018 - Present",
     "experienceDesc": "Developed various web applications for government and education clients. Handling projects from school management systems, public information platforms, to REST APIs for administrative applications.",
     "methodology": "Work Methodology",
-    "methodologyDesc": "I believe in clear communication with clients and teams. I work with agile methodology, providing regular updates and being open to feedback. I also believe in clean code and good documentation to ease future maintenance.",
+    "methodologyDesc": "I take a just-in-time learning approach to my work — I learn what's needed for the project at hand, rather than trying to master everything upfront. This keeps me efficient and focused on delivering value. For instance, I haven't worked with Laravel's Queue, Job, and Listener features simply because none of my projects have required them so far. I believe in clear communication, clean code, and good documentation to ensure smooth project handover and future maintenance.",
     "hobbies": "Hobbies & Interests",
-    "hobbiesDesc": "Outside work, I enjoy learning about new technologies and the latest trends in web development. I actively participate in developer communities and often share knowledge with fellow developers. I also enjoy following tutorials and reading documentation to continuously improve my skills."
+    "hobbiesDesc": "Outside of work, I enjoy self-directed learning — exploring new technologies, reading documentation, and following the latest trends in web development. I tend to be a passive member in developer communities, preferring to read and learn from others' discussions rather than actively participating. I believe in continuously improving my skills through hands-on practice and independent study.",
+    "learning": "Current Learning",
+    "learningDesc": "I'm currently exploring AI-assisted development — not just writing prompts and accepting results, but critically reviewing AI-generated code against my own understanding. I only apply AI where I already grasp the underlying concepts. Beyond that, I'm learning to integrate AI LLMs into applications and building my roadmap toward becoming an AI Product Engineer."
   },
   "projects": {
     "title": "Projects",

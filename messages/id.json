@@ -1,8 +1,8 @@
 {
   "home": {
     "greeting": "Halo, saya",
-    "role": "Frontend Developer (React.js) with Backend Experience",
-    "description": "Frontend-focused Developer dengan pengalaman 4+ tahun, awalnya fokus di backend menggunakan Laravel. Saat ini menspesialisasikan diri di React.js untuk membangun antarmuka yang responsif dan integrasi API yang efektif.",
+    "role": "Frontend Developer — React.js & Laravel",
+    "description": "Membangun aplikasi web full-stack sejak 2018. Saya menangani semuanya — dari perancangan database dan REST API hingga antarmuka pengguna yang responsif dan modern — secara mandiri, end to end.",
     "viewProjects": "Lihat Proyek",
     "contactMe": "Hubungi Saya",
     "techStack": "Tech Stack",
@@ -14,17 +14,19 @@
   "about": {
     "title": "Tentang Saya",
     "career": "Perjalanan Karir",
-    "careerDesc": "Saya adalah seorang Frontend Developer dengan pengalaman lebih dari 4 tahun di industri teknologi. Perjalanan saya dimulai sebagai full-stack developer dengan fokus pada backend menggunakan Laravel, namun saat ini saya telah mengkhususkan diri dalam pengembangan frontend menggunakan React.js dan Next.js.",
+    "careerDesc": "Perjalanan saya di dunia teknologi dimulai sejak 2018, membangun website dengan PHP native dan template Bootstrap. Tahun 2019 saya mulai menggunakan framework pertama saya, CodeIgniter 3. Di akhir 2021 saya beralih ke Laravel, dan awal 2022 mulai menggunakannya untuk aplikasi production. Pertengahan 2022 saya mulai mendalami frontend dengan React — dan stack Laravel + React telah menjadi andalan utama saya sejak saat itu hingga sekarang.",
     "skills": "Keahlian",
-    "skillsDesc": "Saya memiliki keahlian mendalam dalam membangun antarmuka web yang responsif dan modern. Dengan latar belakang backend yang kuat, saya memahami arsitektur API dan dapat berkolaborasi dengan baik dengan backend developers. Saya terbiasa bekerja dengan teknologi terkini seperti React.js, Next.js, TypeScript, dan Tailwind CSS.",
+    "skillsDesc": "Sebagai solo developer, saya membangun aplikasi web full-stack dari awal hingga akhir — menangani arsitektur backend dan antarmuka frontend secara mandiri. Stack utama saya meliputi React.js, Next.js, TypeScript, Tailwind CSS, dan Laravel. Saya terbiasa bekerja di seluruh layer, mulai dari merancang skema database dan membangun REST API hingga membuat antarmuka yang responsif dan modern.",
     "experience": "Pengalaman Profesional",
     "experienceTitle": "Full-Stack Developer",
     "experiencePeriod": "2018 - Sekarang",
     "experienceDesc": "Mengembangkan berbagai aplikasi web untuk klien pemerintahan dan pendidikan. Menangani proyek dari pembuatan sistem manajemen sekolah, platform informasi publik, hingga REST API untuk aplikasi administratif.",
     "methodology": "Metodologi Kerja",
-    "methodologyDesc": "Saya percaya pada pentingnya komunikasi yang jelas dengan klien dan tim. Saya bekerja dengan metodologi agile, memberikan update secara berkala dan selalu terbuka untuk feedback. Saya juga percaya pada clean code dan dokumentasi yang baik untuk memudahkan maintenance di masa depan.",
+    "methodologyDesc": "Saya menerapkan pendekatan just-in-time learning dalam bekerja — saya mempelajari apa yang dibutuhkan untuk project yang sedang dikerjakan, bukan mencoba menguasai semuanya sekaligus. Ini membuat saya efisien dan fokus pada memberikan hasil. Sebagai contoh, saya belum familiar dengan fitur Queue, Job, dan Listener di Laravel karena sampai saat ini belum ada project saya yang membutuhkannya. Saya percaya pada komunikasi yang jelas, clean code, dan dokumentasi yang baik untuk memastikan kelancaran handover project dan maintenance di masa depan.",
     "hobbies": "Hobi & Minat",
-    "hobbiesDesc": "Di luar pekerjaan, saya senang belajar tentang teknologi baru dan tren terbaru dalam web development. Saya aktif mengikuti komunitas developer dan tidak jarang berbagi pengetahuan dengan rekan-rekan sesama developer. Saya juga gemar mengikuti tutorial dan membaca dokumentasi untuk terus meningkatkan skill."
+    "hobbiesDesc": "Di luar pekerjaan, saya menikmati belajar secara mandiri — mengeksplorasi teknologi baru, membaca dokumentasi, dan mengikuti tren terbaru dalam web development. Saya cenderung pasif di komunitas developer, lebih suka membaca dan belajar dari diskusi orang lain daripada aktif berpartisipasi. Saya percaya pada peningkatan skill yang berkelanjutan melalui praktik langsung dan pembelajaran mandiri.",
+    "learning": "Pembelajaran Saat Ini",
+    "learningDesc": "Saat ini saya sedang mengeksplorasi AI-assisted development — bukan sekadar menulis prompt dan menerima hasil jadi, tetapi mengecek secara kritis setiap kode yang dihasilkan AI berdasarkan pemahaman yang sudah saya miliki. Saya hanya menerapkan AI pada hal-hal yang sudah saya pahami konsep dasarnya. Selain itu, saya juga sedang mempelajari integrasi AI LLM ke dalam aplikasi dan membangun roadmap menuju AI Product Engineer."
   },
   "projects": {
     "title": "Proyek",
