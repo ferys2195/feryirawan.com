@@ -64,6 +64,15 @@ export function AboutContent() {
 
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-neutral-900 dark:text-white">
+                {t("learning")}
+              </h2>
+              <p className="text-neutral-700 dark:text-neutral-300">
+                {t("learningDesc")}
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="text-2xl font-bold text-neutral-900 dark:text-white">
                 {t("hobbies")}
               </h2>
               <p className="text-neutral-700 dark:text-neutral-300">
