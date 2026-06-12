@@ -60,12 +60,12 @@ export function ContactInfo({ contactInfo }: ContactInfoProps) {
                     {t("phone")}
                   </h3>
                   <a
-                    href="https://wa.me/6282234068387"
+                    href={`https://wa.me/${contactInfo.phone.replace(/\D/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
                   >
-                    +62 822-3406-8387
+                    {contactInfo.phone}
                   </a>
                 </div>
               </div>
