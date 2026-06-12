@@ -1,8 +1,8 @@
 {
   "home": {
     "greeting": "Halo, saya",
-    "role": "Frontend Developer (React.js) with Backend Experience",
-    "description": "Frontend-focused Developer dengan keahlian backend, membangun aplikasi full-stack sejak 2018. Saat ini menspesialisasikan diri di React.js dan Laravel untuk menghasilkan antarmuka responsif dan API yang solid.",
+    "role": "Frontend Developer — React.js & Laravel",
+    "description": "Membangun aplikasi web full-stack sejak 2018. Saya menangani semuanya — dari perancangan database dan REST API hingga antarmuka pengguna yang responsif dan modern — secara mandiri, end to end.",
     "viewProjects": "Lihat Proyek",
     "contactMe": "Hubungi Saya",
     "techStack": "Tech Stack",

@@ -1,8 +1,8 @@
 {
   "home": {
     "greeting": "Hi, I'm",
-    "role": "Frontend Developer (React.js) with Backend Experience",
-    "description": "Frontend-focused Developer with backend expertise, building full-stack applications since 2018. Currently specializing in React.js and Laravel to deliver responsive interfaces and robust APIs.",
+    "role": "Frontend Developer — React.js & Laravel",
+    "description": "Building full-stack web applications since 2018. I handle everything from database design and REST APIs to crafting responsive, modern user interfaces — solo, end to end.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
     "techStack": "Tech Stack",
