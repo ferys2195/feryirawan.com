@@ -34,7 +34,10 @@
     "clientTitle": "Proyek Klien",
     "clientDesc": "Hasil kerja profesional untuk klien dan organisasi.",
     "personalTitle": "Proyek Pribadi",
-    "personalDesc": "Proyek sampingan dan tools yang saya buat untuk belajar dan bersenang-senang."
+    "personalDesc": "Proyek sampingan dan tools yang saya buat untuk belajar dan bersenang-senang.",
+    "detail": "Detail",
+    "viewDetail": "Lihat Detail",
+    "close": "Tutup"
   },
   "contact": {
     "title": "Hubungi Saya",

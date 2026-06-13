@@ -34,7 +34,10 @@
     "clientTitle": "Client Projects",
     "clientDesc": "Professional work delivered for clients and organizations.",
     "personalTitle": "Personal Projects",
-    "personalDesc": "Side projects and tools I built for fun and learning."
+    "personalDesc": "Side projects and tools I built for fun and learning.",
+    "detail": "Detail",
+    "viewDetail": "View Details",
+    "close": "Close"
   },
   "contact": {
     "title": "Contact Me",
