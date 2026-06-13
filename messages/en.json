@@ -7,8 +7,8 @@
     "contactMe": "Contact Me",
     "techStack": "Tech Stack",
     "techStackDesc": "Technologies I use daily.",
-    "recentProjects": "Recent Projects",
-    "recentProjectsDesc": "Some of my recent work.",
+    "featuredProjects": "Projects",
+    "featuredProjectsDesc": "Selected projects I've worked on.",
     "viewAll": "View all"
   },
   "about": {

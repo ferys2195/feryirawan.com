@@ -4,13 +4,21 @@ import { useTranslations } from "next-intl";
 import type { Project } from "@/types";
 import { ProjectCard } from "@/features/projects";
 
-interface RecentProjectsProps {
+interface FeaturedProjectsProps {
   projects: Project[];
 }
 
-export function RecentProjects({ projects }: RecentProjectsProps) {
+export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const t = useTranslations("home");
-  const recentProjects = projects.slice(0, 3);
+
+  const featuredProjects = projects
+    .filter((p) => p.is_pin === true)
+    .sort((a, b) => {
+      const orderA = a.sort_order ?? 999;
+      const orderB = b.sort_order ?? 999;
+      if (orderA !== orderB) return orderA - orderB;
+      return (a.name ?? "").localeCompare(b.name ?? "");
+    });
 
   return (
     <section className="border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
@@ -19,10 +27,10 @@ export function RecentProjects({ projects }: RecentProjectsProps) {
           <div className="flex items-end justify-between">
             <div className="space-y-2 flex-1">
               <h2 className="text-3xl font-bold text-neutral-900 dark:text-white">
-                {t("recentProjects")}
+                {t("featuredProjects")}
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400 wrap-normal">
-                {t("recentProjectsDesc")}
+                {t("featuredProjectsDesc")}
               </p>
             </div>
             <Link
@@ -34,7 +42,7 @@ export function RecentProjects({ projects }: RecentProjectsProps) {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {recentProjects.map((project) => (
+            {featuredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
