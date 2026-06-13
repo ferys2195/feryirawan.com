@@ -1,4 +1,4 @@
-import { Hero, Skills, RecentProjects } from "@/features/home";
+import { Hero, Skills, FeaturedProjects } from "@/features/home";
 import { fetcher } from "@/lib/fetcher";
 import type { SkillCategory, Project } from "@/types";
 
@@ -12,7 +12,7 @@ export default async function Page() {
     <>
       <Hero />
       <Skills skillCategories={skillsData.skillCategories} />
-      <RecentProjects projects={projectsData.projects} />
+      <FeaturedProjects projects={projectsData.projects} />
     </>
   );
 }

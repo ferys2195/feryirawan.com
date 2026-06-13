@@ -13,6 +13,9 @@ export interface Project {
     demo?: string;
     source?: string;
   };
+  // Optional fields for featured projects
+  is_pin?: boolean;
+  sort_order?: number;
 }
 
 export interface SkillCategory {
