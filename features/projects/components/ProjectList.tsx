@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import type { Project } from "@/types";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard, sortProjects } from "..";
 
 interface ProjectListSectionProps {
   projects: Project[];
@@ -17,6 +17,8 @@ function ProjectGroup({
 }) {
   if (projects.length === 0) return null;
 
+  const sorted = sortProjects(projects);
+
   return (
     <section className="border-b border-neutral-200 bg-white last:border-b-0 dark:border-neutral-800 dark:bg-neutral-950">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
@@ -30,7 +32,7 @@ function ProjectGroup({
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {projects.map((project) => (
+          {sorted.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>

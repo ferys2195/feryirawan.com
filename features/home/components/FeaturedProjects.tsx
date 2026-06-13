@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { Project } from "@/types";
-import { ProjectCard } from "@/features/projects";
+import { ProjectCard, sortProjects } from "@/features/projects";
 
 interface FeaturedProjectsProps {
   projects: Project[];
@@ -11,14 +11,9 @@ interface FeaturedProjectsProps {
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const t = useTranslations("home");
 
-  const featuredProjects = projects
-    .filter((p) => p.is_pin === true)
-    .sort((a, b) => {
-      const orderA = a.sort_order ?? 999;
-      const orderB = b.sort_order ?? 999;
-      if (orderA !== orderB) return orderA - orderB;
-      return (a.name ?? "").localeCompare(b.name ?? "");
-    });
+  const featuredProjects = sortProjects(projects).filter(
+    (p) => p.is_pin === true,
+  );
 
   return (
     <section className="border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
