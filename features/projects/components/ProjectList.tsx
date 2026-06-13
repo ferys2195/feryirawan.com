@@ -29,7 +29,7 @@ function ProjectGroup({
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -42,12 +42,8 @@ function ProjectGroup({
 export function ProjectListSection({ projects }: ProjectListSectionProps) {
   const t = useTranslations("projects");
 
-  const clientProjects = projects.filter(
-    (p) => p.projectType === "client",
-  );
-  const personalProjects = projects.filter(
-    (p) => p.projectType === "personal",
-  );
+  const clientProjects = projects.filter((p) => p.projectType === "client");
+  const personalProjects = projects.filter((p) => p.projectType === "personal");
 
   return (
     <>
