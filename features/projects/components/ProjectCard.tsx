@@ -89,7 +89,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
         </CardHeader>
 
-        <CardContent className="flex flex-col gap-4 mb-6">
+        <CardContent className="flex flex-1 flex-col gap-4">
           <p className="line-clamp-2 text-sm text-neutral-700 dark:text-neutral-300">
             {project.description}
           </p>
@@ -105,9 +105,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
 
+          {/* Spacer to push links to bottom */}
+          <div className="flex-1" />
+
           {/* Links */}
           {project.links && (
-            <div className="flex flex-wrap gap-3 border-t border-neutral-200 pt-6 dark:border-neutral-800">
+            <div className="flex flex-wrap gap-3 border-t border-neutral-200 py-6 dark:border-neutral-800">
               {project.links.demo && (
                 <a
                   href={project.links.demo}
