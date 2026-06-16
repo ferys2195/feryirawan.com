@@ -11,9 +11,9 @@ interface FeaturedProjectsProps {
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const t = useTranslations("home");
 
-  const featuredProjects = sortProjects(projects).filter(
-    (p) => p.is_pin === true,
-  );
+  const featuredProjects = sortProjects(projects)
+    .filter((p) => p.is_pin === true)
+    .slice(0, 3);
 
   return (
     <section className="border-b border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-950">
