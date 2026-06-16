@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fery Irawan - Fullstack Developer Portfolio",
   description:
-    "Fullstack Developer with 6+ years building end-to-end web applications. Currently building AI-powered products — RAG systems and LLM-powered features.",
+    "Fullstack Developer with 8+ years building end-to-end web applications. Currently building AI-powered products — RAG systems and LLM-powered features.",
   icons: {
     icon: [
       {
