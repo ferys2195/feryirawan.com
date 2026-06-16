@@ -94,8 +94,22 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {project.description}
           </p>
 
+          {project.highlights && project.highlights.length > 0 && (
+            <ul className="space-y-1">
+              {project.highlights.map((highlight, index) => (
+                <li
+                  key={index}
+                  className="line-clamp-1 text-sm text-neutral-600 dark:text-neutral-400"
+                >
+                  <span className="mr-1.5 text-emerald-500">•</span>
+                  {highlight}
+                </li>
+              ))}
+            </ul>
+          )}
+
           <div className="flex flex-wrap gap-2">
-            {project.tech.map((tech) => (
+            {project.tech.slice(0, 5).map((tech) => (
               <span
                 key={tech}
                 className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
@@ -103,6 +117,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 {tech}
               </span>
             ))}
+            {project.tech.length > 5 && (
+              <span className="rounded-full bg-neutral-100 px-2 py-1 text-xs text-neutral-500 dark:bg-neutral-900 dark:text-neutral-500">
+                +{project.tech.length - 5}
+              </span>
+            )}
           </div>
 
           {/* Spacer to push links to bottom */}
