@@ -1,8 +1,8 @@
 {
   "home": {
     "greeting": "Halo, saya",
-    "role": "Frontend Developer — React.js & Laravel",
-    "description": "Membangun aplikasi web full-stack sejak 2018. Saya menangani semuanya — dari perancangan database dan REST API hingga antarmuka pengguna yang responsif dan modern — secara mandiri, end to end.",
+    "role": "Saya membantu bisnis membangun alat digital yang benar-benar menyelesaikan masalah",
+    "description": "6+ tahun membangun aplikasi web end-to-end secara mandiri. Saat ini saya aktif membangun produk berbasis AI — RAG systems dan LLM-powered features.",
     "viewProjects": "Lihat Proyek",
     "contactMe": "Hubungi Saya",
     "techStack": "Tech Stack",

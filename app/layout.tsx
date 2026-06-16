@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fery Irawan - Frontend Developer Portfolio",
+  title: "Fery Irawan - Fullstack Developer Portfolio",
   description:
-    "Frontend Developer specializing in React.js and Next.js. Experienced in building responsive web applications and integrating with REST APIs.",
+    "Fullstack Developer with 6+ years building end-to-end web applications. Currently building AI-powered products — RAG systems and LLM-powered features.",
   icons: {
     icon: [
       {

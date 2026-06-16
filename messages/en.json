@@ -1,8 +1,8 @@
 {
   "home": {
     "greeting": "Hi, I'm",
-    "role": "Frontend Developer — React.js & Laravel",
-    "description": "Building full-stack web applications since 2018. I handle everything from database design and REST APIs to crafting responsive, modern user interfaces — solo, end to end.",
+    "role": "I help businesses build web tools that actually solve problems",
+    "description": "6+ years building end-to-end web applications independently. Currently building AI-powered products — RAG systems and LLM-powered features.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
     "techStack": "Tech Stack",
