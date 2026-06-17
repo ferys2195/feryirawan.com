@@ -47,7 +47,7 @@ export function ProjectDetailDialog({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
-        className=" min-w-[calc(100vw-4rem)]  overflow-y-auto"
+        className="max-h-[calc(100vh-4rem)] min-w-[calc(100vw-4rem)] overflow-y-auto"
         showCloseButton
       >
         <DialogHeader>
